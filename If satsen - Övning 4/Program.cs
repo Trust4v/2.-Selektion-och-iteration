@@ -13,7 +13,12 @@ namespace If_satsen___Övning_4
             Console.Write("Mata in ett tal : ");
             double heltal = double.Parse(Console.ReadLine());
 
-            if (heltal % 7 == 0)
+            
+            if (heltal == 7) 
+            {
+                Console.WriteLine("Det är väl klart att siffran 7 kan delas med 7? Tråkigt att ens behöva testa det.. SKÄMMIGT!");
+            }
+            else if (heltal % 7 == 0)
             {
                 Console.WriteLine("Talet är jämt delbart med 7");
             }
