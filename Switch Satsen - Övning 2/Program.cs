@@ -8,11 +8,11 @@ namespace Switch_Satsen___Övning_2
 {
     class Program
     {
-        static void wanderingtrader()
+        static void wanderingtrader(int g)
         {
             Random rnd = new Random();
             int num = rnd.Next(1, 100);
-            if (num <10)
+            if (num <100)
             {
                 Console.WriteLine("You stubled uppon a wandering traveler. He showes you his wears");
                 Console.WriteLine("In his stock he has:");
@@ -61,28 +61,28 @@ namespace Switch_Satsen___Övning_2
                         yaxel++;
                         coins = coins + num1;
                         Console.WriteLine("You now have : " + coins + "coins.");
-                        wanderingtrader();
+                        wanderingtrader(coins);
                         break;
                 case "s":
                     Console.WriteLine("You walked South");
                         yaxel--;
                         coins = coins + num1;
                         Console.WriteLine("You now have : " + coins + "coins.");
-                        wanderingtrader();
+                        wanderingtrader(coins);
                         break;
                 case "e":
                     Console.WriteLine("You walked East");
                         xaxel++;
                         coins = coins + num1;
                         Console.WriteLine("You now have : " + coins + "coins.");
-                        wanderingtrader();
+                        wanderingtrader(coins);
                         break;
                 case "w":
                     Console.WriteLine("You walked West");
                         xaxel--;
                         coins = coins + num1;
                         Console.WriteLine("You now have : " + coins + "coins.");
-                        wanderingtrader();
+                        wanderingtrader(coins);
                         break;
                 default:
                         if (xaxel > 0){vaderx = "east";}
