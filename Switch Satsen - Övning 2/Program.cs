@@ -42,8 +42,7 @@ namespace Switch_Satsen___Övning_2
         static void Main(string[] args)
             
         {
-            Random rnd = new Random();
-            int num1 = rnd.Next(1, 5);
+            
             int coins = 0;
             int xaxel = 0;
             int yaxel = 0;
@@ -53,7 +52,8 @@ namespace Switch_Satsen___Övning_2
             while (sak == true){
             Console.Write("Which way do you want to go? (n/s/e/w) : ");
             string Vaderstack = Console.ReadLine();
-                
+                Random rnd = new Random();
+                int num1 = rnd.Next(1, 3);
 
                 switch (Vaderstack){
                 case "n":
