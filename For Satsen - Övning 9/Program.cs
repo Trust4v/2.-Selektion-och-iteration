@@ -22,8 +22,7 @@ namespace For_Satsen___Övning_9
                 {
                     nara = skillnadi;
                     narai = i;
-                }
-                    
+                }                  
             }
             Console.WriteLine(Math.Round(narai, 1));
             

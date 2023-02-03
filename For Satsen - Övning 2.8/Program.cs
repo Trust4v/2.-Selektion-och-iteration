@@ -8,25 +8,58 @@ namespace For_Satsen___Övning_2._8
 {
     class Program
     {
-        static void Main(string[] args)
+        static bool primtaltest(double tal)
+        {
+            bool primtal = true;
+            for (double i = 2; i < tal; i++)
+            {
+                if (tal % i == 0 && i != tal && i != 1)
+                {
+                    primtal = false;
+                    break;
+                }
+                else if (tal == 1 || tal == 0)
+                {
+                    primtal = false;
+                }
+            }
+            return primtal;
+        }
+            static void Main(string[] args)
         {
             Console.Write("Mata in ett heltal : ");
             double inmat = double.Parse(Console.ReadLine());
-            
-            for (int i = 2; inmat == 1; i++)
+            double inmat1 = inmat;
+            bool primtal = true;
+            for (double i = inmat-1; i < inmat; i--)
             {
-                if (inmat % i == 0)
+                if (inmat % i == 0 && i != inmat && i != 1)
                 {
-                    inmat = inmat / i;
-                    Console.WriteLine(inmat + " och "+ i);
+                    Console.WriteLine("Talet är ett inte primtal och kan primtals-faktoriseras");
+                    primtal = false;
+                    break;
                 }
-                if (i == inmat)
-                {
-                    i = 0;
-                }
-
             }
-            
+            if (!primtal)
+            {
+                for (double i = 2; inmat > 1; i++)
+                {
+                    if (inmat % i == 0 && primtaltest(i))
+                    {
+                        inmat /= i;
+                        Console.WriteLine("Faktor : " + i);
+                    }
+                    else if (i == inmat)
+                    {
+                        i = 1;
+                    }
+                }
+            }
+            else if (primtal)
+            {
+                Console.WriteLine("Talet är ett primtal så dess faktor är : " + inmat);
+            }
+
         }
     }
 }
