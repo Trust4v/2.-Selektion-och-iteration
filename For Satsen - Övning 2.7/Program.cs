@@ -10,7 +10,7 @@ namespace For_Satsen___Övning_2._7
     {
         static void Main(string[] args)
         {
-            Console.Write("Mata in ett heltal : ");
+            Console.Write("Mata in ett positivt heltal : ");
             double inmat = double.Parse(Console.ReadLine());
             bool primtal = true;
             for (int i = 2; i < inmat; i++)
