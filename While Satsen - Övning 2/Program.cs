@@ -11,9 +11,9 @@ namespace While_Satsen___Övning_2
         static void Main(string[] args)
         {
             Random rnd = new Random();
-            int gissningar = 0;
+            int gissningar;
             int highscore = int.MaxValue;
-            int tak = 0;
+            int tak = 0; 
             while (true)
             {
                 //Highscore
