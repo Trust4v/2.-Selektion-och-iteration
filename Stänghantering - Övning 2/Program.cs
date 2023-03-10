@@ -10,7 +10,8 @@ namespace Stänghantering___Övning_2
     {
         static void Main(string[] args)
         {
-            string lösenord = "dinmoder";
+            Console.Write("Skriv in vad lösenordet ska vara: ");
+            string lösenord = Console.ReadLine();
             int antalgissningar = 0;
             Console.WriteLine("Gissa lösenordet");
             while (true)
